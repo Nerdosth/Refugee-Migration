@@ -576,6 +576,10 @@ section {
 #obs1 {
   background: #f7f7f7;
   padding: 80px 0 60px 0;
+  border-style: dotted;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: #1695c7
 }
 
 #obs1 .counters span {
@@ -594,6 +598,10 @@ section {
 #obs2 {
   background: #fff;
   padding: 80px 0 60px 0;
+  border-style: dotted;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: #1695c7
 }
 
 #obs2 .counters span {
@@ -612,6 +620,10 @@ section {
 #obs3 {
   background: #f7f7f7;
   padding: 80px 0 60px 0;
+  border-style: dotted;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: #1695c7
 }
 
 #obs3 .counters span {
@@ -633,6 +645,10 @@ section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/refugeeboat.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
+  border-style: dotted;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: #1695c7
 }
 
 @media (max-width: 1024px) {
