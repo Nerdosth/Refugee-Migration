@@ -1,0 +1,125 @@
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+
+
+SET XACT_ABORT ON
+
+BEGIN TRANSACTION QUICKDBD
+
+CREATE TABLE [Demographic_ml] (
+    [index] int  NOT NULL ,
+    [year] int  NOT NULL ,
+    [country_origin] varchar  NOT NULL ,
+    [country_asylum] varchar  NOT NULL ,
+    [share_borders] int  NOT NULL ,
+    [female_0to4] int  NOT NULL ,
+    [female_5to11] int  NOT NULL ,
+    [female_12to17] int  NOT NULL ,
+    [female_18to59] int  NOT NULL ,
+    [female_60] int  NOT NULL ,
+    [female_other] int  NOT NULL ,
+    [female_total] int  NOT NULL ,
+    [male_0to4] int  NOT NULL ,
+    [male_5to11] int  NOT NULL ,
+    [male_12to17] int  NOT NULL ,
+    [male_18to59] int  NOT NULL ,
+    [unknown_demographic] int  NOT NULL ,
+    [male_60] int  NOT NULL ,
+    [male_other] int  NOT NULL ,
+    [male_total] int  NOT NULL ,
+    [total_gender] int  NOT NULL ,
+    [recognized_decisions] double  NOT NULL ,
+    [complementary_protection] double  NOT NULL ,
+    [rejected] double  NOT NULL ,
+    [otherwise_closed] double  NOT NULL ,
+    [total_decisions] double  NOT NULL ,
+    CONSTRAINT [PK_Demographic_ml] PRIMARY KEY CLUSTERED (
+        [index] ASC,[year] ASC
+    )
+)
+
+CREATE TABLE [Event_ml] (
+    [index] int  NOT NULL ,
+    [year] int  NOT NULL ,
+    [country_origin] varchar  NOT NULL ,
+    [disaster_deaths] int  NOT NULL ,
+    [disaster_affected] int  NOT NULL ,
+    [conflict_deaths] int  NOT NULL ,
+    CONSTRAINT [PK_Event_ml] PRIMARY KEY CLUSTERED (
+        [index] ASC,[country_origin] ASC
+    )
+)
+
+CREATE TABLE [Cleaned_conflict] (
+    [index] int  NOT NULL ,
+    [year] int  NOT NULL ,
+    [conflict_name] varchar  NOT NULL ,
+    [dyad_name] varchar  NOT NULL ,
+    [where_coordinates] varchar  NOT NULL ,
+    [where_description] varchar  NOT NULL ,
+    [latitude] double  NOT NULL ,
+    [longitude] double  NOT NULL ,
+    [country_origin] varchar  NOT NULL ,
+    [region] varchar  NOT NULL ,
+    [best] int  NOT NULL ,
+    CONSTRAINT [PK_Cleaned_conflict] PRIMARY KEY CLUSTERED (
+        [index] ASC,[region] ASC
+    )
+)
+
+CREATE TABLE [Cleaned_disasters] (
+    [index] int  NOT NULL ,
+    [year] int  NOT NULL ,
+    [disaster_group] varchar  NOT NULL ,
+    [disaster_subgroup] varchar  NOT NULL ,
+    [disaster_type] varchar  NOT NULL ,
+    [disaster_subtype] varchar  NOT NULL ,
+    [country_origin] varchar  NOT NULL ,
+    [country_origin(ISO)] varchar  NOT NULL ,
+    [region] varchar  NOT NULL ,
+    [continent] varchar  NOT NULL ,
+    [location] varchar  NOT NULL ,
+    [total_deaths] double  NOT NULL ,
+    [total_affected] double  NOT NULL ,
+    [geo_locations] varchar  NOT NULL ,
+    CONSTRAINT [PK_Cleaned_disasters] PRIMARY KEY CLUSTERED (
+        [index] ASC
+    )
+)
+
+ALTER TABLE [Demographic_ml] WITH CHECK ADD CONSTRAINT [FK_Demographic_ml_country_origin] FOREIGN KEY([country_origin])
+REFERENCES [Event_ml] ([country_origin])
+
+ALTER TABLE [Demographic_ml] CHECK CONSTRAINT [FK_Demographic_ml_country_origin]
+
+ALTER TABLE [Event_ml] WITH CHECK ADD CONSTRAINT [FK_Event_ml_year] FOREIGN KEY([year])
+REFERENCES [Demographic_ml] ([year])
+
+ALTER TABLE [Event_ml] CHECK CONSTRAINT [FK_Event_ml_year]
+
+ALTER TABLE [Cleaned_conflict] WITH CHECK ADD CONSTRAINT [FK_Cleaned_conflict_year] FOREIGN KEY([year])
+REFERENCES [Demographic_ml] ([year])
+
+ALTER TABLE [Cleaned_conflict] CHECK CONSTRAINT [FK_Cleaned_conflict_year]
+
+ALTER TABLE [Cleaned_conflict] WITH CHECK ADD CONSTRAINT [FK_Cleaned_conflict_country_origin] FOREIGN KEY([country_origin])
+REFERENCES [Event_ml] ([country_origin])
+
+ALTER TABLE [Cleaned_conflict] CHECK CONSTRAINT [FK_Cleaned_conflict_country_origin]
+
+ALTER TABLE [Cleaned_disasters] WITH CHECK ADD CONSTRAINT [FK_Cleaned_disasters_year] FOREIGN KEY([year])
+REFERENCES [Demographic_ml] ([year])
+
+ALTER TABLE [Cleaned_disasters] CHECK CONSTRAINT [FK_Cleaned_disasters_year]
+
+ALTER TABLE [Cleaned_disasters] WITH CHECK ADD CONSTRAINT [FK_Cleaned_disasters_country_origin] FOREIGN KEY([country_origin])
+REFERENCES [Event_ml] ([country_origin])
+
+ALTER TABLE [Cleaned_disasters] CHECK CONSTRAINT [FK_Cleaned_disasters_country_origin]
+
+ALTER TABLE [Cleaned_disasters] WITH CHECK ADD CONSTRAINT [FK_Cleaned_disasters_region] FOREIGN KEY([region])
+REFERENCES [Cleaned_conflict] ([region])
+
+ALTER TABLE [Cleaned_disasters] CHECK CONSTRAINT [FK_Cleaned_disasters_region]
+
+COMMIT TRANSACTION QUICKDBD

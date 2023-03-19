@@ -1,4 +1,4 @@
-Year,Country of origin,Country of origin (ISO),Country of asylum,Country of asylum (ISO),Recognized decisions,Complementary protection,Rejected decisions,Otherwise closed,Total decisions
+year,country_origin,country_origin(ISO),country_asylum,country_asylum(ISO),recognized_decisions,complementary_protection,rejected_decisions,otherwise_closed,total_decisions
 2001,Afghanistan,AFG,Australia,AUS,247,0,93,5,345
 2001,Albania,ALB,Australia,AUS,5,0,13,0,18
 2001,Algeria,DZA,Australia,AUS,5,0,13,0,18
