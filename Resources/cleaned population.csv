@@ -1,4 +1,4 @@
-Year,Country of origin,Country of origin (ISO),Country of asylum,Country of asylum (ISO)
+year,country_origin,country_origin(ISO),country_asylum,country_asylum(ISO)
 2001,Iran (Islamic Rep. of),IRN,Afghanistan,AFG
 2001,Iraq,IRQ,Afghanistan,AFG
 2001,Iraq,IRQ,Albania,ALB
