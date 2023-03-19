@@ -1,35 +1,30 @@
-# Project-4_Refugee-Migration
+## Project-4_World Refugee Migration Trends and Predictions
 
-![image](https://user-images.githubusercontent.com/113714205/221047516-545a3e6e-3b3f-4938-ad0d-c244b29f6a8b.png)
-
+![image](https://user-images.githubusercontent.com/113714205/226197349-ee882a50-509f-4de9-a20d-a5e54dd29f3b.png)
 
 Project 4:
 
-Team 00: 
-
 Team Members:   Rahma Ali, Nicholas Erdos-Thayer, Chris Schultz,  Art Rogers
 
+# Project Background and Sources:
 
-Project Proposal:
+Our project aims to analyze data provided by the United Nations Refugee Agency (UNHCR) and other sources to gain insights into migration patterns and to develop a machine learning model to focus on refugee populations. The data includes information on refugee populations, demographic information (gender & age), asylum decisions, conflict and disasters impacting refugee populations around the world. We hope to gain a deeper understanding of the factors that influence migration flows and develop predictions of future migration patterns.
 
-We plan to analyze state level data made available by the UN Refugee Agency, UNHCR. In our analysis we hope to learn migration flows from other countries into the US and summarize the reasons on the migration and we hope to use machine learning to predict future refugee numbers.
+**Refugee Summary:**
+In the past decade, the global refugee crisis has more than doubled in scope. In 2022, the UNHCR announced that we had surpassed the 100 million mark for total displaced persons, meaning that over 1.2% of the global population have been forced to leave their homes. Among these people are over 32.5 million refugees. 76% of those refugees come from just six countries. Before we look at the world’s largest refugee crises, a quick note that we’re focusing specifically on refugees and counting them by country of origin for this listing
 
- 
+# Data Sources:
+Our data sources show conflict and disaster are the two major types of refugee populations.
 
-Data Sources:
+•	**Refugee Demographic Data** - The United Nations Refugee Agency (UNHCR ) collects data on refugee’s around the world - https://www.unhcr.org/refugee-statistics/download/?url=Kg1Mg6
 
-The UN Refugee Agency collects data on refugee’s around the world - https://www.unhcr.org/refugee-statistics/download/?url=Kg1Mg6
+•	**Conflict Data** - Uppsala Conflict Data Program - Department of Peace and Conflict Research - https://ucdp.uu.se/
 
-Uppsala Conflict Data Program - Department of Peace and Conflict Research - https://ucdp.uu.se/
-
-Centre for Research on the Epidemiology of Disasters - https://www.emdat.be/
-
-About Dataset
-
-UN Refugee Agency, UNHCR
+•	**Disaster Data** - Centre for Research on the Epidemiology of Disasters - https://www.emdat.be/
 
 
- Machine Learning Goal - Input Feature (select from dropdown, for example), export a prediction output. (API) 
+
+  
 	
  # Data Cleaning
  The data cleaning process involved identifying missing data, correcting inconsistencies, removing duplicates, irrelevant data, standardizing and scaling the data. The resulting cleaned dataset was suitable for further analysis and can be used to gain insights into the patterns, trends and future prediction of refugee migration.
