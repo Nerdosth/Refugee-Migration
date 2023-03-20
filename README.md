@@ -22,20 +22,18 @@ Our data sources show conflict and disaster are the two major types of refugee p
 
 •	**Disaster Data** - Centre for Research on the Epidemiology of Disasters - https://www.emdat.be/
 
-
-
-  
-	
  # Data Cleaning
  The data cleaning process involved identifying missing data, correcting inconsistencies, removing duplicates, irrelevant data, standardizing and scaling the data. The resulting cleaned dataset was suitable for further analysis and can be used to gain insights into the patterns, trends and future prediction of refugee migration.
  
  #  Database
-4 tables were created using  SQLite database. The table names are as follow:
+Created SQLite tables to store and retrieve the data. Created a database schema with primary and secondary keys and documented the schema in Quick Database Diagrams application.
 
-#### 1. Table 1 -Demographic_ml
-#### 2. Table 2 – Event_ml
-#### 3. Table 3- Cleaned_conflict
-#### 4. Table 4 –Cleaned_disasters
+**Tables:**
+1.	Table 1 -Demographic_ml
+2.	Table 2 – Event_ml
+3.	Table 3- Cleaned_conflict
+4.	Table 4 –Cleaned_disasters
+
 
 ![image](https://user-images.githubusercontent.com/113312408/226196244-7c66b085-c3f8-4512-bb7f-a54b80c58ddd.png)
 
