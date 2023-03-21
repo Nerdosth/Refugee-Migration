@@ -13,6 +13,19 @@ Our project aims to analyze data provided by the United Nations Refugee Agency (
 **Refugee Summary:**
 In the past decade, the global refugee crisis has more than doubled in scope. In 2022, the UNHCR announced that we had surpassed the 100 million mark for total displaced persons, meaning that over 1.2% of the global population have been forced to leave their homes. Among these people are over 32.5 million refugees. 76% of those refugees come from just six countries. Before we look at the world’s largest refugee crises, a quick note that we’re focusing specifically on refugees and counting them by country of origin for this listing
 
+# Technology Used
+
+•	Flask
+•	HTML
+•	CSS
+•	Java Script
+•	Decision Tree Classifier
+•	Random Forest Classifier
+•	Pandas
+•	SQLite
+•	Tableau
+
+
 # Data Sources:
 Our data sources show conflict and disaster are the two major types of refugee populations.
 
