@@ -77,9 +77,21 @@ Created 4 areas of focus to capture the refugee metrics and to show countries wi
 
 
 # Web Site:
-Used HTML and CSS to create the site.
+	We used HTML and CSS to design the site and a highlight able navigation bar to navigate to different pages of the website.
+![image](https://user-images.githubusercontent.com/113714205/226501789-5e848824-b0ee-4dfd-b1f6-4c53e20aa8d4.png)
+
+
 
 # Machine Learning: 
+    •	Out machine learning was in sections highlighted below.
+    •	Loading the cleaned data
+    •	Used OneHot Encoder to transform the data
+    •	Trained and scaled the data
+    •	Used Linear Regression for the first regression model
+    •	Used Random Forest Regression for the second regression model
+    •	Used “model.predict” to make our prediction
+
+
 
 
 
