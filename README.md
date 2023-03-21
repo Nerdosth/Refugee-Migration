@@ -1,6 +1,6 @@
 ## Project-4_World Refugee Migration Trends and Predictions
 
-![image](https://user-images.githubusercontent.com/113714205/226197349-ee882a50-509f-4de9-a20d-a5e54dd29f3b.png)
+![image](https://user-images.githubusercontent.com/113714205/226762476-fc712adc-19bd-4047-bfc6-7fd9f07a6db2.png)
 
 Project 4:
 
