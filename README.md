@@ -62,15 +62,19 @@ Created SQLite tables to store and retrieve the data. Created a database schema 
 
 # Tableau Metrics, Maps & Graphs:
 Created 4 areas of focus to capture the refugee metrics and to show countries with the greatest impacts from conflicts or disasters.
-  **Observation 1:**
-  
-  •	This map shows the countries with the greatest impacts from conflicts and disasters. 
+ 
+ **Observation 1 Demographics:**
+  •	The Demographic graphs demonstrates the ages, gender and overall volume of the refugee crisis
+   ![image](https://user-images.githubusercontent.com/113714205/226493646-4230440a-3c06-4147-9621-569fef31820d.png)
   
   **Observation 2:**
-  
-  •	The Demographic graphs demonstrates the ages, gender and overall volume of the refugee crisis
+  •	This map shows the countries with the greatest impacts from conflicts and disasters. 
+  ![image](https://user-images.githubusercontent.com/113714205/226493951-f280cf5f-b3f1-48cf-aa1c-f5be076f494f.png)
   
   **Observation3:**
+  This graphical shows Refugee Movement
+  ![image](https://user-images.githubusercontent.com/113714205/226493823-a0cd46ee-71a1-476e-8632-0e8faf491cb9.png)
+
 
 # Web Site:
 Used HTML and CSS to create the site.
