@@ -79,7 +79,8 @@ Created 4 areas of focus to capture the refugee metrics and to show countries wi
 # Web Site:
 We used HTML and CSS to design the site and a highlight able navigation bar to navigate to different pages of the website.  For the graphical representations we embedded Tableau slides to demonstrate our data.
 
-![image](https://user-images.githubusercontent.com/113714205/226501789-5e848824-b0ee-4dfd-b1f6-4c53e20aa8d4.png)
+
+![image](https://user-images.githubusercontent.com/113714205/226765350-b2810ebf-11cb-4566-911b-a215f0541a89.png)
 
 
 
