@@ -45,9 +45,14 @@ infrastructure in Turkey Earthquake.
 
 
  # Data Cleaning
- The data cleaning process involved identifying missing data, correcting inconsistencies, removing duplicates, irrelevant data, standardizing and scaling the data. The resulting cleaned dataset was suitable for further analysis and can be used to gain insights into the patterns, trends and future prediction of refugee migration. Example of how the data was cleaned is shown below
+ The data cleaning process involved identifying missing data, correcting inconsistencies, removing duplicates, irrelevant data, standardizing and scaling the data. The resulting cleaned dataset was suitable for further analysis and can be used to gain insights into the patterns, trends and future prediction of refugee migration. 
+
+**Example of uncleaned data**
  
 ![image](https://user-images.githubusercontent.com/113312408/226767144-787db2ec-2de2-4942-867d-132c8500d308.png)
+
+**Example of cleaned data**
+
 ![image](https://user-images.githubusercontent.com/113312408/226766928-bdd77fd0-1682-471c-b526-56af3fe17590.png)
 
  #  Database
