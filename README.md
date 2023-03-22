@@ -99,7 +99,7 @@ Created 4 areas of focus to capture the refugee metrics and to show countries wi
 
 
 # Web Site:
-We used HTML and CSS to design the site and a highlight able navigation bar to navigate to different pages of the website.  For the graphical representations we embedded Tableau slides to demonstrate our data.
+We used HTML and CSS to design the site and a navigation bar that has hover highlights to navigate to different pages of the website. The Flask deployment is used to run the interactive machine learning predictions. For the graphical representations we embedded Tableau slides to demonstrate our data.
 
 
 ![image](https://user-images.githubusercontent.com/113714205/226765350-b2810ebf-11cb-4566-911b-a215f0541a89.png)
