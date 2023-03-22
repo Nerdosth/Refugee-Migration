@@ -1,40 +1,28 @@
-import pandas as pd
-import joblib
 from flask import Flask, render_template, request, jsonify
+import joblib
+import pandas as pd
 
 app = Flask(__name__)
 
-# Load the saved model, preprocessor, and label encoder
-best_model = joblib.load("decision_tree_model.pkl")
-preprocessor = joblib.load("saved_preprocessor.pkl")
-le = joblib.load("saved_label_encoder.pkl")
+# Load the trained model, preprocessor, and label encoder
+model = joblib.load('Resources/decision_tree_model.pkl')
+preprocessor = joblib.load('Resources/preprocessor.pkl')
+label_encoder = joblib.load('Resources/label_encoder.pkl')
+final_df = pd.read_csv('Resources/final_df.csv')
 
-# Load your DataFrame (assuming it's saved as a CSV file)
-final_df = pd.read_csv("Resources/final_df.csv")
-
-
-@app.route("/")
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    countries = sorted(final_df['country_origin'].unique().tolist())
-    return render_template("index.html", countries=countries)
+    if request.method == 'POST' and request.is_json:
+        selected_country = request.json.get('country')
+        X_country = final_df[final_df['country_origin'] == selected_country]
+        X_country_processed = preprocessor.transform(X_country)
+        y_pred = model.predict(X_country_processed)
+        prediction = label_encoder.inverse_transform([y_pred[0]])[0]
+        return jsonify(prediction=prediction)
+
+    countries = final_df['country_origin'].unique()
+    return render_template('index.html', countries=countries)
 
 
-def your_machine_learning_model(country):
-    X_country = final_df[final_df['country_origin'] == country]
-    X_country_processed = preprocessor.transform(X_country)
-    y_pred = best_model.predict(X_country_processed)
-    y_pred_country = le.inverse_transform([y_pred[0]])
-
-    return y_pred_country[0]
-
-
-@app.route("/api/calculate-destination", methods=["POST"])
-def calculate_destination():
-    data = request.get_json()
-    country = data["country"]
-    destination_country = your_machine_learning_model(country)
-    return jsonify({"country_of_destination": destination_country})
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
