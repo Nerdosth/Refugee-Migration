@@ -124,7 +124,7 @@ traceback2==1.4.0
 traitlets @ file:///tmp/build/80754af9/traitlets_1636710298902/work
 trio==0.22.0
 trio-websocket==0.9.2
-typing-extensions @ file:///opt/conda/conda-bld/typing_extensions_1647553014482/work
+typing_extensions @ file:///opt/conda/conda-bld/typing_extensions_1647553014482/work
 unittest2==1.1.0
 url-normalize==1.4.3
 urllib3==1.25.11
