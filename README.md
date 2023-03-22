@@ -107,18 +107,16 @@ We used HTML and CSS to design the site and a navigation bar that has hover high
 
 
 # Machine Learning: 
-    •	Out machine learning was in sections highlighted below.
+
+The employed machine learning model utilizes a Decision Tree Classifier, which yields a precision-weighted average score of 63%. Considering this constraint, the data input to the model is refined to encompass the top 20 countries of origin and their corresponding top 20 countries of asylum. Consequently, the model's predictions demonstrate an acceptable correlation with the actual data.
+
+The steps taken to determine the best model: 
     •	Loading the cleaned data
     •	Used OneHot Encoder to transform the data
-    •	Trained and scaled the data
-    •	Used Linear Regression for the first regression model
-    •	Used Random Forest Regression for the second regression model
-    •	Used “model.predict” to make our prediction
-
-
-
-
-
-
- 
-
+    •	Trained the data
+    •	Passed a Random Forest and Decision Tree model with different parameters through GridSearchCV to test accuracy
+    •	Saved the model with the best score 
+    •	Used “model.predict” to make our prediction with poor initial results.
+    •	Refined the cleaned data further to filter down to top 20 countries of origin and their corresponding top 20 countries of asylum
+    •	Saved the model and then used a Flask app for the saved model to interact with the webpage. 
+    
