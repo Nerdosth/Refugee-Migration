@@ -13,15 +13,15 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
   <!-- Boostrap CSS -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="..\static\css\bootstrap\bootstrap.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="..\static\css\style.css" rel="stylesheet">
 
-    <!-- Link to CSS file -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- Update the href attribute to point to the CSS file inside the static folder -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
 
-  <!-- Link to JavaScript file -->
-  <script src="{{ url_for('static', filename='asset/js/main.js') }}"></script>
+<!-- Update the src attribute to point to the JavaScript file inside the static folder -->
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
   <!-- =======================================================
   * Template Name: Regna - v4.10.0
@@ -38,7 +38,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <a href="index.html"><img src="../static/img/logo.png" alt=""></a>
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="index.html">Regna</a></h1>-->
       </div>
@@ -47,9 +47,10 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#intro">Intro</a></li>
-          <li><a class="nav-link scrollto" href="#obs1">Observation 1</a></li>
-          <li><a class="nav-link scrollto " href="#obs2">Observation 2</a></li>
-          <li><a class="nav-link scrollto " href="#obs3">Observation 3</a></li>
+          <li><a class="nav-link scrollto" href="#obs1">Demographics</a></li>
+          <li><a class="nav-link scrollto " href="#obs2">Conflict & Disasters</a></li>
+          <li><a class="nav-link scrollto " href="#obs3">Refugee Migration</a></li>
+          <li><a class="nav-link scrollto " href="#obs4">Machine Learning Model</a></li>
           <li><a class="nav-link scrollto " href="#conclusion">Conclusion</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
         </ul>
@@ -62,7 +63,7 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Refugee Migration Trends & Predictions</h1>
-      <h2>Et harum quidem rerum facilis est et expedita distinctio</h2>
+      <h2></h2>
     </div>
   </section><!-- End Hero Section -->
 
@@ -73,26 +74,24 @@
       <div class="container" data-aos="fade-up">
         <div class="row about-container">
 
-          <div class="col-lg-6 content order-lg-1 order-2">
-            <h2 class="title">Project Background & Sources</h2>
+          <div class="col-lg-12 content order-lg-1 order-2">
+            <h2 class="title">Project Background</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Our project aims to analyze data provided by the United Nations Refugee Agency (UNHCR) and other sources to gain insights into migration patterns and to develop a machine learning model to focus on refugee populations. The data includes information on refugee populations, demographic information (gender & age), asylum decisions, conflict and disasters impacting refugee populations around the world. We hope to gain a deeper understanding of the factors that influence migration flows and develop predictions of future migration patterns.
             </p>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
+          <div class="col-lg-12 content order-lg-1 order-2">
+            <h2 class="title">Project Summary</h2>
+            <p>
+            In the past decade, the global refugee crisis has more than doubled in scope. In 2022, the UNHCR announced that we had surpassed the 100 million mark for total displaced persons, meaning that over 1.2% of the global population have been forced to leave their homes. Among these people are over 32.5 million refugees. 76% of those refugees come from just six countries. Before we look at the world’s largest refugee crises, a quick note that we’re focusing specifically on refugees and counting them by country of origin for this listing
+            <p>
+          <div class="col-lg-12 content order-lg-1 order-2">
+            <h2 class="title">Sources</h2>
+            <p>
+              <a href="https://www.unhcr.org/refugee-statistics/download/?url=Kg1Mg6">Refugee Demographic Data - The United Nations Refugee Agency (UNHCR)</a>
+            <p>
+              <a href="https://ucdp.uu.se/">Conflict Data - Uppsala Conflict Data Program - Department of Peace and Conflict Research </a> 
+            <p>
+              <a href="https://www.emdat.be/">Centre for Research on the Epidemiology of Disasters </a>
 
           </div>
 
@@ -106,25 +105,25 @@
     <section id="obs1">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Observation 1</h3>
-          <div class='tableauPlaceholder' id='viz1676999635938' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RefugeeMapping&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='RefugeeMapping&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RefugeeMapping&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1676999635938');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1180px';vizElement.style.height='450px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3 class="section-title">DEMOGRAPHICS</h3>
+          <div class='tableauPlaceholder' id='viz1679265203251' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_5_16792472968230&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project4_5_16792472968230&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_5_16792472968230&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1679265203251');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          <p class="section-description">Demographic Information in age groups and by Country of origin and asylum</p>
         </div>
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Note 1</p>
+            <p>0-17 stays relative flat</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Note 2</p>
+            <p>18-59 increase as expected with age range</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Note 3</p>
+            <p>County of Origin and Asylum</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
@@ -141,25 +140,25 @@
     <section id="obs2">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Observation 2</h3>
-          <div class='tableauPlaceholder' id='viz1676999739596' style='position: relative'><noscript><a href='#'><img alt='What is the Average Percentage Refugees represented in the Population of Least Developed Countries from 1995 through 2015 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhoisgeneroustorefugeesRefugeePopulationinLeastDevelopedCountries&#47;6-LeastDevelopedandRefPopinCountryPop&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WhoisgeneroustorefugeesRefugeePopulationinLeastDevelopedCountries&#47;6-LeastDevelopedandRefPopinCountryPop' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhoisgeneroustorefugeesRefugeePopulationinLeastDevelopedCountries&#47;6-LeastDevelopedandRefPopinCountryPop&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1676999739596');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3 class="section-title">CONFLICT AND DISASTER</h3>
+          <div class='tableauPlaceholder' id='viz1679202807021' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_4_16792020717640&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project_4_16792020717640&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_4_16792020717640&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1679202807021');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          <p class="section-description">Conflicts and Disaster information. Syria Government and Earthquake accounted the hightest Deaths</p>
         </div>
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Note 1</p>
+            <p>Haiti Earthquake</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Note 2</p>
+            <p>Indonesia Earthquake</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Note 3</p>
+            <p>Syria War</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
@@ -176,9 +175,9 @@
     <section id="obs3">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Observation 3</h3>
-          <div class='tableauPlaceholder' id='viz1676999812614' style='position: relative'><noscript><a href='#'><img alt='U.S. Refugee Numbers ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;re&#47;refugee-cap&#47;U_S_RefugeeNumbers&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='refugee-cap&#47;U_S_RefugeeNumbers' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;re&#47;refugee-cap&#47;U_S_RefugeeNumbers&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1676999812614');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='630px';vizElement.style.height='457px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3 class="section-title">Refugee Movement</h3>
+          <div class="flourish-embed flourish-sankey" data-src="visualisation/13124659"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+          <p class="section-description">Refugee movement from Origin (source) to Asylum (Target)</p>
         </div>
         <div class="row counters">
 
@@ -206,6 +205,58 @@
 
       </div>
     </section><!-- End Observation 3 Section -->
+
+        <!-- ======= Observation 4 Section ======= -->
+        <section id="obs4">
+          <div class="container" data-aos="fade-up">
+            <div class="section-header">
+              <h3 class="section-title">Machine Learning</h3>
+
+            <!-- ======= Machine Learning Selector ======= -->
+
+            <h1>Country of Asylum Predictor</h1>
+
+            <form id="country-form">
+              <label for="country-select">Select a country:</label>
+              <select id="country-select" name="country">
+                <option value="">---</option>
+                {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+              </select>
+              <button type="submit">Submit</button>
+            </form>
+
+            <div id="output"></div>
+
+              <p class="section-description">ENTER NOTES</p>
+            </div>
+            <div class="row counters">
+    
+              <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 1</p>
+              </div>
+    
+              <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 2</p>
+              </div>
+    
+              <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 3</p>
+              </div>
+    
+              <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 4</p>
+              </div>
+    
+            </div>
+    
+          </div>
+        </section><!-- End Observation 4 Section -->
 
 
     <!-- ======= Conclusion ======= -->
@@ -293,9 +344,9 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Bootstrap JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Template Main JS File -->
-  <script src="assets\js\main.js"></script>
+  <script src="../static/js/main.js"></script>
 
 </body>
 
