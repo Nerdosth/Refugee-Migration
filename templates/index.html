@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Refugee Migration</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+<!-- Glight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@1.0.9/dist/css/glightbox.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@1.0.9/dist/js/glightbox.min.js"></script>
+
+<!-- Boostrap CSS -->
+  <link href="../static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+<!-- ======= Machine Learning script ======= -->
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const countrySelect = document.getElementById('country');
+            const selectedCountry = countrySelect.options[countrySelect.selectedIndex].value;
+            const resultDiv = document.getElementById('result');
+
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ country: selectedCountry })
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultDiv.innerHTML = 'Country of Asylum: ' + data.prediction;
+            });
+        }
+    </script> <!-- == End Machine Learning script == -->
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex justify-content-between align-items-center">
+
+        <div id="logo">
+            <a href="index.html"><img src="static/img/logo.png" alt="site logo" class="my-image"></a>
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!--<h1><a href="index.html">Regna</a></h1>-->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#intro">Intro</a></li>
+            <li><a class="nav-link scrollto" href="#obs1">Demographics</a></li>
+            <li><a class="nav-link scrollto " href="#obs2">Conflict and Disaster</a></li>
+            <li><a class="nav-link scrollto " href="#obs3">Refugee Movement</a></li>
+            <li><a class="nav-link scrollto " href="#obs4">Machine Learning</a></li>
+            <li><a class="nav-link scrollto " href="#conclusion">Conclusion</a></li>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Refugee Migration Trends & Predictions</h1>
+        <h2></h2>
+        </div>
+    </section><!-- End Hero Section -->
+
+<!-- ======= Start #main ======= -->
+    <main id="main">
+
+<!-- ======= About Section ======= -->
+        <section id="intro">
+            <div class="container" data-aos="fade-up">
+            <div class="row about-container">
+
+                <div class="col-lg-12 content order-lg-1 order-2">
+                <h2 class="title">Project Background</h2>
+                <p>
+                Our project aims to analyze data provided by the United Nations Refugee Agency (UNHCR) and other sources to gain insights into migration patterns and to develop a machine learning model to focus on refugee populations. The data includes information on refugee populations, demographic information (gender & age), asylum decisions, conflict and disasters impacting refugee populations around the world. We hope to gain a deeper understanding of the factors that influence migration flows and develop predictions of future migration patterns.
+                </p>
+                <div class="col-lg-12 content order-lg-1 order-2">
+                <h2 class="title">Project Summary</h2>
+                <p>
+                In the past decade, the global refugee crisis has more than doubled in scope. In 2022, the UNHCR announced that we had surpassed the 100 million mark for total displaced persons, meaning that over 1.2% of the global population have been forced to leave their homes. Among these people are over 32.5 million refugees. 76% of those refugees come from just six countries. Before we look at the world’s largest refugee crises, a quick note that we’re focusing specifically on refugees and counting them by country of origin for this listing
+                <p>
+                <div class="col-lg-12 content order-lg-1 order-2">
+                <h2 class="title">Sources</h2>
+                <p>
+                <a href="https://www.unhcr.org/refugee-statistics/download/?url=Kg1Mg6">Refugee Demographic Data - The United Nations Refugee Agency (UNHCR )</a>
+                <p>
+                <a href="https://ucdp.uu.se/">Conflict Data - Uppsala Conflict Data Program</a>
+                <p>
+                    <a href="https://www.emdat.be/">Research on the Epidemiology of Disasters</a>
+                </div>
+
+                <div class="col-lg-6 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>
+            </div>
+            </div>
+        </section><!-- End About Section -->
+        
+<!-- ======= Demographics Section =======  -->
+        <section id="obs1">
+            <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h3 class="section-title">Demographics</h3>
+                <div class='tableauPlaceholder' id='viz1679265203251' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_5_16792472968230&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project4_5_16792472968230&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4_5_16792472968230&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1679265203251');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <p class="section-description">Demographic Information in age groups and by Country of origin and asylum</p>
+            </div>
+            <div class="row counters">
+
+                <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>0-17 stays relative flat</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+                <p>18-59 increase as expected with age range</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>County of Origin and Asylum</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 4</p>
+                </div>
+            </div>
+            </div>
+        </section><!-- End Demographics Section -->
+
+<!--======= Conflict and Disaster Section ======= -->
+        <section id="obs2">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                <h3 class="section-title">Conflict and Disaster</h3>
+                <div class='tableauPlaceholder' id='viz1679202807021' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_4_16792020717640&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project_4_16792020717640&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_4_16792020717640&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1679202807021');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <p class="section-description">Conflicts and Disaster information. Syria Government and Earthquake accounted the hightest Deaths</p>
+                </div>
+                <div class="row counters">
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Haiti Earthquake</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Indonesia Earthquake</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Syria War</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Note 4</p>
+                </div>
+                </div>
+            </div>
+        </section><!-- End Conflict and Disaster Section -->
+
+<!--=======Refugee Movement Section =======  -->
+    <section id="obs3">
+        <div class="container">
+            <div class="section-header">
+            <h3 class="section-title">Refugee Movement</h3>
+            <div class="flourish-embed flourish-sankey" data-src="visualisation/13124659"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <p class="section-description">Refugee movement from Origin to Asylum</p>
+            </div>
+            <div class="row counters">
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 1</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 2</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 3</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Note 4</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+<!-- ======= Machine Learning Section ======= -->
+        <section id="obs4">
+            <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Machine Learning</h3>
+
+                <p class="section-description">The employed machine learning model utilizes a Decision Tree Classifier, which yields a precision-weighted average score of 63%. Considering this constraint, the data input to the model is refined to encompass the top 20 countries of origin and their corresponding top 20 countries of asylum. Consequently, the model's predictions demonstrate an acceptable correlation with the actual data.</p>
+                <form method="post" onsubmit="submitForm(event)">
+                <div class="center-dropdown">
+                    <label for="country">Select Country of Origin : </label>
+                    <select name="country" id="country">
+                        {% for country in countries %}
+                        <option value="{{ country }}">{{ country }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Predict" >
+                </form>
+                </div>
+                <div id="result" class="section-description"></div>
+                </div>
+            </div>
+        </section><!-- End Machine Learning Section -->
+    
+<!-- ======= Conclusion ======= -->
+        <section id="conclusion">
+            <div class="container">
+                <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3 class="cta-title">Conclusion</h3>
+                    <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                </div>
+            </div>
+            </section><!-- End Conclusion Section -->
+
+<!-- ======= Team Section ======= -->
+        <section id="team">
+            <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h3 class="section-title">Team</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Rahma, Ali</h4>
+                    <span>SQL Database and Data Transforming</span>
+                    <div class="social">
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                <div class="member" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Chris, Schultz</h4>
+                    <span>Tableau Visualization</span>
+                    <div class="social">
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                <div class="member" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Art, Rogers</h4>
+                    <span>Data Cleaning and Transforming</span>
+                    <div class="social">
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                <div class="member" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Nicholas, Erdos-Thayer</h4>
+                    <span>Machine Learning & Site Creation</span>
+                    <div class="social">
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section><!-- End Team Section -->
+
+    </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+
+        <footer id="footer">
+            <div class="footer-top">
+            <div class="container"> 
+            </div>
+            </div>
+        
+            <div class="container">
+            <div class="credits">
+                Initial template design by <a href="https://bootstrapmade.com/">BootstrapMade</a>, modified by Team
+            </div>
+            </div>
+        </footer><!-- End Footer -->
+    
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        
+        <!-- Bootstrap JS Files -->
+        <script src="../static/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Template Main JS File -->
+        <script src="../static/js/app.js"></script>
+</body>
+</html>
+
+<!-- =======================================================
+* Template Name: Regna - v4.10.0
+* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
