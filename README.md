@@ -112,11 +112,18 @@ The employed machine learning model utilizes a Decision Tree Classifier, which y
 
 The steps taken to determine the best model: 
     •	Loading the cleaned data
+    
     •	Used OneHot Encoder to transform the data
+    
     •	Trained the data
+    
     •	Passed a Random Forest and Decision Tree model with different parameters through GridSearchCV to test accuracy
+    
     •	Saved the model with the best score 
+    
     •	Used “model.predict” to make our prediction with poor initial results.
+    
     •	Refined the cleaned data further to filter down to top 20 countries of origin and their corresponding top 20 countries of asylum
+    
     •	Saved the model and then used a Flask app for the saved model to interact with the webpage. 
     
