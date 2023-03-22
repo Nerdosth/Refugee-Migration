@@ -110,7 +110,8 @@ We used HTML and CSS to design the site and a navigation bar that has hover high
 
 The employed machine learning model utilizes a Decision Tree Classifier, which yields a precision-weighted average score of 63%. Considering this constraint, the data input to the model is refined to encompass the top 20 countries of origin and their corresponding top 20 countries of asylum. Consequently, the model's predictions demonstrate an acceptable correlation with the actual data.
 
-The steps taken to determine the best model: 
+The steps taken to determine the best model:
+
     •	Loading the cleaned data
     
     •	Used OneHot Encoder to transform the data
